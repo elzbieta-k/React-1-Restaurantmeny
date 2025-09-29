@@ -17,7 +17,11 @@ export default function Meny(props) {
             );
           })}
         </div>
-        <Dish data={dishes} />
+        <div className={styles.gridContainer}>
+          {dishes.map((dish) => {
+            return <Dish key={dish.id} data={dish} />;
+          })}
+        </div>
       </div>
     </>
   );
